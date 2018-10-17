@@ -1,0 +1,115 @@
+*{
+	margin:0;
+	padding: 0;
+}
+#iconWall{
+	width: 732px;
+	background-color:#f0f0f0;
+	margin:0 auto;
+	overflow: hidden;
+	padding-top: 1px;
+	padding-left: 1px;
+	list-style: none;
+}
+#iconWall li{
+	width: 121px;
+	height: 108px;
+	background-color: #fff;
+	float: left;
+	margin-right: 1px;
+	margin-bottom: 1px;
+	position: relative;
+}
+
+.img-back, .img-front{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 121px;
+	height: 108px;
+	/*background-color: yellow;*/
+	text-align: center;
+	line-height: 108px;
+}
+/*3d*/
+li img{
+	vertical-align: middle;
+}
+
+.img-3d{
+	transform-style: preserve-3d;
+}
+.img-back{
+	transform: rotateY(180deg);
+}
+
+/*测试代码*/
+/*li:hover .img-3d{
+	transition: .3s linear;
+	transform: rotateY(180deg);
+}
+*/
+#btnRefresh{
+	text-align: center;
+	transition: .3s linear;
+	/*background-color: #fff;*/
+}
+
+/*换一批*/
+.iconRefresh{
+	background:url("../img/refresh.png");
+	width: 28px;
+	height: 28px;
+	margin:32px auto 0;
+}
+#btnRefresh:hover{
+	color: #fff;
+	background-color: #dd2727;
+	transition: 0s;
+}
+#btnRefresh:hover .iconRefresh{
+	background:url(../img/refresh-white.png);
+}
+
+/*处理浮层*/
+
+.mask{
+	position:absolute;
+	left:0;
+	top:0;
+	width: 121px;
+	height: 108px;
+	background-color: rgba(0,0,0, .7);
+	/*给元素设置透明色，为0则包含子元素在内均为透明，为1则不是透明的*/
+	opacity: 0;
+
+}
+.mask img{
+	float: right;
+	margin-top: 8px;
+	margin-right: 8px;
+}
+.mask p{
+	font-style: 12px;
+	color: #fff;
+	margin-top: 40px;
+	text-align: center;
+}
+.mask a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+	background-color: red;
+	width: 70px;
+	display:block;
+	margin:0 auto;
+	text-align: center;
+	height: 18px;
+	border-radius: 9px;
+}
+li:hover .mask{
+	opacity: 1;
+	transition: .3s linear;
+
+	
+}
